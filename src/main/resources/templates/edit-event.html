@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit Event</title>
+</head>
+<body>
+<h1>Edit Event</h1>
+<form th:action="@{/events/{id}(id=${event.id})}" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" th:value="${event.name}"/><br/>
+    <label for="description">Description:</label>
+    <input type="text" id="description"
+    name="description" th:value="${event.description}"/><br/>
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" th:value="${event.date}"/><br/>
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location" th:value="${event.location}"/><br/>
+    <label for="category">Category:</label>
+    <input type="text" id="category" name="category" th:value="${event.category}"/><br/>
+    <label for="imageUrl">Image URL:</label>
+    <input type="text" id="imageUrl" name="imageUrl" th:value="${event.imageUrl}"/><br/>
+    <input type="submit" value="Update"/>
+</form>
+</body>
+</html>
